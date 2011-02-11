@@ -1,0 +1,12 @@
+Write a program that continuously monitors the search results for a particular keyword (say food, http, or anything else that's high volume) and outputs unique links as soon as they have been Tweeted at least K times. (K is a constant, say 3)
+USAGE: monitor.py [query]
+
+output:
+populate links to terminal
+
+example:
+monitor.py egypt
+python monitor.py egypt
+http://search.twitter.com/search?since_id=36190029294477312&q=egypt
+http://search.twitter.com/search?since_id=36190047778783232&q=egypt
+....
