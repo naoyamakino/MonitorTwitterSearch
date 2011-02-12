@@ -30,4 +30,5 @@ It should only print when new popular links (mentioned more than K times) entere
 But now it prints new ones as well as unchanged links (therefor already printed before) as it iterates through the whole list and prints if the count is greater than K.
 
 Future enahncement:
-it is more accurate to count with the original URL but not shortened URLs as different shortened URLs might point to the same URL.  
+it is more accurate to count with the original URL but not shortened URLs as different shortened URLs might point to the same URL.
+Consider using otterapi: http://code.google.com/p/otterapi/wiki/Resources#/linkposts
