@@ -48,6 +48,7 @@ def main():
             max_id = update_urls(max_id)
             if count_popular_links(k) > current_number_of_links:
                 populate_links(k)
+                print " "
                 current_number_of_links = count_popular_links(k) 
 
 if __name__ == "__main__":

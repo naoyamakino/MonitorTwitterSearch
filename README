@@ -1,12 +1,33 @@
 Write a program that continuously monitors the search results for a particular keyword (say food, http, or anything else that's high volume) and outputs unique links as soon as they have been Tweeted at least K times. (K is a constant, say 3)
+
 USAGE: monitor.py [query]
 
-output:
-populate links to terminal
+Requirements:
+Twython: https://github.com/ryanmcgrath/twython 
+simplejson
+oauth2
 
 example:
-monitor.py egypt
 python monitor.py egypt
-http://search.twitter.com/search?since_id=36190029294477312&q=egypt
-http://search.twitter.com/search?since_id=36190047778783232&q=egypt
-....
+http://colv.in/hh0A4B: 3
+ 
+http://bit.ly/gNIcgk: 3
+http://colv.in/hh0A4B: 3
+ 
+http://bit.ly/gNIcgk: 3
+http://colv.in/hh0A4B: 3
+http://newzfor.me/?czyw: 3
+ 
+http://bit.ly/gNIcgk: 3
+http://bit.ly/f1pgxv: 4
+http://colv.in/hh0A4B: 3
+http://newzfor.me/?czyw: 3
+
+...
+
+BUGS:
+It should only print when new popular links (mentioned more than K times) entered or the number of mentions for the link changes.
+But now it prints new ones as well as unchanged links (therefor already printed before) as it iterates through the whole list and prints if the count is greater than K.
+
+Future enahncement:
+it is more accurate to count with the original URL but not shortened URLs as different shortened URLs might point to the same URL.  
